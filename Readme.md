@@ -25,7 +25,16 @@ Time Taken --> (4.5 hours)
 ```terminal
     npm test
 ```
+## Test results
 
+### Test 2
+![Test 1 and 2](./test/test1andtest2.png)
+
+
+
+### Test 3
+
+![Test 3](./test/test3.png)
 
 ## Problems Faced and Areas of Improvement
 
@@ -43,5 +52,3 @@ With only 2 hour remaining in the end, there was no time to integrate UI and bac
 2) Assuming a new project is not made from scatch, the current project can be improved by dockerizing files for easy execution. Since two different languages are used, this reduces complexity.
 
 3) The third test can be improved by replacing spy functions by stub and imitating the response of Covalent API instead of actually calling it for 60 times within a second. The response can be used to create a fake ".txt" file.
-
-
