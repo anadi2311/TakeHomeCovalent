@@ -50,7 +50,7 @@ async function requestTickerData(interval) {
 
 
 if (require.main === module) {
-    startTimer(Number(args[2]))
+    startTimer(Number(args[2])*1000)
 }
 else{
     console.log("not in module")

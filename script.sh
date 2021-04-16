@@ -1,6 +1,10 @@
 #!/bin/bash
-echo "Set the Interval for API calls in MilliSeconds"
-read interval
-echo "1. Downloading Data from API at $interval Milli Seconds >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-ticker_data=`node FetchTickerData.js $interval` 
+echo "1.Press Enter only if you create .env and pasted your API KEY"
+read API
+
+echo "2. Downloading Data from API at 60  Seconds >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+ticker_data=`node FetchTickerData.js 60`
+
+
+
 

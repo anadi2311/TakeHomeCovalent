@@ -3,7 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import random
 import numpy as np
+import threading
 
+
+WAIT_SECONDS = 61
 
 def Transform_Data():
     try:
@@ -45,6 +48,10 @@ def Transform_Data():
               ax1.annotate(str(p.get_height()), (p.get_x() * 1.005, p.get_height() * 1.005))
 
             fig.savefig("Contract_Address_with_Nulls.png")
+            ticker = threading.Event()
+            while not ticker.wait(WAIT_SECONDS):
+                Transform_Data()
+            
     except:
         raise Exception("Problem Analyzing Data")
 
